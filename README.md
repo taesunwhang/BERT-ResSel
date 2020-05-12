@@ -11,7 +11,7 @@ Implements the model described in the following paper [Domain Adaptive Training 
 ```
 This code is reimplemented as a fork of [huggingface/transformers][7].  
 
-<center><img src="model_overview.jpg" alt="model" width="1000"/></center>
+<center><img src="model_overview.jpg" alt="model" width="500"/></center>
 
 
 Data Creation
