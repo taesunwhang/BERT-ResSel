@@ -24,7 +24,7 @@ python data/data_utils.py
 
 Post Training Data Creation
 --------
-Download [`ubuntu_post_training.txt` corpus [here][3] and simply run
+Download `ubuntu_post_training.txt` corpus [here][3] and simply run
 ```shell
 python data/create_bert_post_training_data.py
 ```
