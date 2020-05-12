@@ -10,8 +10,7 @@ Implements the model described in the following paper [Domain Adaptive Training 
 }
 ```
 This code is reimplemented as a fork of [huggingface/transformers][7].  
-
-![alt text](model_overview.jpg)
+![](model_overview.jpg =250x)
 
 Data Creation
 --------
@@ -59,7 +58,7 @@ If you wish to get the pre-trained response selection model, we provide the mode
 
 Domain Post Training BERT
 --------
-To domain post training BERT, simply run
+To domain post-train BERT, simply run
 ```shell
 python main.py --model bert_ubuntu_pt --train_type post_training --bert_pretrained bert-base-uncased
 ```
