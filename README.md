@@ -10,7 +10,9 @@ Implements the model described in the following paper [Domain Adaptive Training 
 }
 ```
 This code is reimplemented as a fork of [huggingface/transformers][7].  
-![](model_overview.jpg =250x)
+
+<img src="model_overview.jpg" alt="model" width="200"/>
+
 
 Data Creation
 --------
