@@ -1,4 +1,4 @@
-Context-Aware Response Selection
+Domain Adaptive Training BERT for Response Selection
 ====================================
 Implements the model described in the following paper [Domain Adaptive Training BERT for Response Selection](https://arxiv.org/abs/1908.04812).
 ```
@@ -10,7 +10,12 @@ Implements the model described in the following paper [Domain Adaptive Training 
 }
 ```
 This code is reimplemented as a fork of [huggingface/transformers][7].  
-  
+
+img[model_overview.jpg] {
+  width: 70%;
+  border: none;
+  background: none;
+}
 ![alt text](model_overview.jpg)
 
 Data Creation
