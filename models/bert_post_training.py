@@ -11,7 +11,7 @@ class BertDomainPostTraining(nn.Module):
       os.path.join(self.hparams.bert_pretrained_dir, self.hparams.bert_pretrained,
                    "%s-config.json" % self.hparams.bert_pretrained),
     )
-    self._bert_model = modeling_bert.BertModel.from_pretrained(
+    self._bert_model = modeling_bert.BertForPreTraining.from_pretrained(
       os.path.join(self.hparams.bert_pretrained_dir, self.hparams.bert_pretrained, self.hparams.bert_checkpoint_path),
       config=bert_config
     )
