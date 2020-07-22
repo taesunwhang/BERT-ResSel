@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export file_name=bert-base-uncased-pytorch_model.bin
-if [ -f $PWD/resources/bert-base-uncased/$filename ]; then
+if [ -f $PWD/resources/bert-base-uncased/$file_name ]; then
     echo "$file_name exists"
 else
     wget https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-pytorch_model.bin

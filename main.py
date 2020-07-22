@@ -57,6 +57,7 @@ def train_model(args):
     hparams["root_dir"] = args.root_dir
     hparams["bert_pretrained_dir"] = args.bert_pretrained_dir
     hparams["bert_pretrained"] = args.bert_pretrained
+    hparams["data_dir"] = args.data_dir
     hparams["model_type"] = args.model
 
     timestamp = datetime.now().strftime('%Y%m%d-%H%M%S')

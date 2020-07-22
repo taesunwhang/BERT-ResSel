@@ -33,6 +33,13 @@ python data/create_bert_post_training_data.py
 ```
 After creating post_training data, keep `ubuntu_post_training.hdf5` file under `data/ubuntu_corpus_v1`directory.
 
+Domain Post Training BERT
+--------
+To domain post-train BERT, simply run
+```shell
+python main.py --model bert_ubuntu_pt --train_type post_training --bert_pretrained bert-base-uncased --data_dir ./data/ubuntu_corpus_v1/ubuntu_post_training.hdf5
+```
+
 BERT Fine-tuning (Response Selection)
 --------
 ### Training
@@ -59,13 +66,6 @@ If you wish to get the pre-trained response selection model, we provide the mode
 | [BERT_base][5] | 0.8115 | 0.9003 | 0.9768 | 0.8809 |
 |  [BERT_DPT][6] | 0.8515 | 0.9272 | 0.9851 | 0.9081 |
 
-
-Domain Post Training BERT
---------
-To domain post-train BERT, simply run
-```shell
-python main.py --model bert_ubuntu_pt --train_type post_training --bert_pretrained bert-base-uncased
-```
 
 Acknowledgements
 --------

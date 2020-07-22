@@ -306,7 +306,7 @@ class PreTrainedModel(nn.Module):
             state_dict = torch.load(resolved_archive_file, map_location='cpu')
             # taesun -> domaing post training model
             # state_dict.keys() : "model", "optimizer"
-            if resolved_archive_file.endswith('.pth'):
+            if resolved_archive_file.endswith('pth'):
                 for state_key in state_dict["model"].keys():
                     if state_key.startswith("_bert_model.bert."):
                         state_dict[state_key[len("_bert_model.bert."):]] = state_dict["model"][state_key]
