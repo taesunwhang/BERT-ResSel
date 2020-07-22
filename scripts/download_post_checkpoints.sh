@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+export file_name=bert-base-uncased-pytorch_model.bin
+if [ -f $PWD/resources/bert-base-uncased/$filename ]; then
+    echo "$file_name exists"
+else
+    wget https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-pytorch_model.bin
+    mv $file_name resources/bert-base-uncased/
+fi
+
 export file_name=bert-post-uncased-pytorch_model.pth
 if [ -f $PWD/resources/bert-post-uncased/$file_name ]; then
     echo "$file_name exists"
