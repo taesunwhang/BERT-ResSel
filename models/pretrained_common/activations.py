@@ -4,9 +4,7 @@ import math
 import torch
 import torch.nn.functional as F
 
-
 logger = logging.getLogger(__name__)
-
 
 def swish(x):
     return x * torch.sigmoid(x)

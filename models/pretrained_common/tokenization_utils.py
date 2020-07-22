@@ -22,7 +22,7 @@ import json
 import six
 from io import open
 
-from models.pretraiend_common.file_utils import cached_path
+from models.pretrained_common.file_utils import cached_path
 
 logger = logging.getLogger(__name__)
 

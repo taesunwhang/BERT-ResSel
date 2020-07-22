@@ -16,10 +16,11 @@ class BertDomainPostTraining(nn.Module):
       config=bert_config
     )
 
-    if self.hparams.do_eot and self.hparams.model_type == "bert_base_ft":
+    if self.hparams.do_eot:
       self._bert_model.resize_token_embeddings(self._bert_model.config.vocab_size + 1)  # [EOT]
 
   def forward(self, batch):
+
     bert_outputs = self._bert_model(
       input_ids=batch["input_ids"],
       token_type_ids=batch["token_type_ids"],

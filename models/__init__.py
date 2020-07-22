@@ -7,7 +7,7 @@ def Model(hparams, *args):
     "bert_base_ft" : BERTbase,
     "bert_dpt_ft" : BERTbase,
 
-    "post_training" : BertDomainPostTraining,
+    "bert_ubuntu_pt" : BertDomainPostTraining,
   }
 
   return name_model_map[hparams.model_type](hparams, *args)

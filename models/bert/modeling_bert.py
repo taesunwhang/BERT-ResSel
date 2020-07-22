@@ -28,9 +28,9 @@ import torch
 from torch import nn
 from torch.nn import CrossEntropyLoss, MSELoss
 
-from models.pretraiend_common.modeling_utils import PreTrainedModel, prune_linear_layer
+from models.pretrained_common.modeling_utils import PreTrainedModel, prune_linear_layer
 from .configuration_bert import BertConfig
-from models.pretraiend_common.file_utils import add_start_docstrings
+from models.pretrained_common.file_utils import add_start_docstrings
 
 logger = logging.getLogger(__name__)
 
@@ -405,7 +405,7 @@ class BertLMPredictionHead(nn.Module):
                              bias=False)
 
     self.bias = nn.Parameter(torch.zeros(config.vocab_size))
-    self.new_bias = nn.Parameter(torch.zeros(1))
+    self.new_bias = nn.Parameter(torch.zeros(1)) # for [EOT] token
 
   def forward(self, hidden_states):
 

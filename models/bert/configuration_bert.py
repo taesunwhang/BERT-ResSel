@@ -22,17 +22,14 @@ import logging
 import sys
 from io import open
 
-from models.pretraiend_common.configuration_utils import PretrainedConfig
+from models.pretrained_common.configuration_utils import PretrainedConfig
 
 logger = logging.getLogger(__name__)
 
 BERT_PRETRAINED_CONFIG_ARCHIVE_MAP = {
-    #'bert-base-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-config.json",
-    'bert-base-uncased': "/mnt/raid5/shared/bert/pytorch/bert-base-uncased/bert-base-uncased-config.json",
-    #'bert-large-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased-config.json",
-    'bert-large-uncased': "/mnt/raid5/shared/bert/pytorch/bert-large-uncased/bert-large-uncased-config.json",
-    # 'bert-base-cased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-config.json",
-    'bert-base-cased': "/mnt/raid5/shared/bert/pytorch/bert-base-cased/bert-base-cased-config.json",
+    'bert-base-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-config.json",
+    'bert-large-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased-config.json",
+    'bert-base-cased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-config.json",
     'bert-large-cased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-cased-config.json",
     'bert-base-multilingual-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-uncased-config.json",
     'bert-base-multilingual-cased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-config.json",

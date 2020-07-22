@@ -55,7 +55,6 @@ def init_logger(path:str):
 def train_model(args):
     hparams = PARAMS_MAP[args.model]
     hparams["root_dir"] = args.root_dir
-    hparams["data_dir"] = args.data_dir
     hparams["bert_pretrained_dir"] = args.bert_pretrained_dir
     hparams["bert_pretrained"] = args.bert_pretrained
     hparams["model_type"] = args.model

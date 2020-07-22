@@ -159,6 +159,7 @@ class BertPostTrainingDataset(Dataset):
     for feat_key in features.keys():
       curr_features[feat_key] = torch.tensor(features[feat_key]).long()
     curr_features["masked_lm_labels"] = torch.tensor(anno_masked_lm_labels).long()
+
     return curr_features
 
   def _read_hdf_features(self, index):
@@ -169,7 +170,7 @@ class BertPostTrainingDataset(Dataset):
 
     return features
 
-  def _anno_mask_inputs(self, masked_lm_ids, masked_lm_positions, max_seq_len=320):
+  def _anno_mask_inputs(self, masked_lm_ids, masked_lm_positions, max_seq_len=512):
     # masked_lm_ids -> labels
     anno_masked_lm_labels = [-1] * max_seq_len
 

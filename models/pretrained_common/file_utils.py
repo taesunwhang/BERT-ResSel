@@ -23,7 +23,7 @@ import requests
 from filelock import FileLock
 from tqdm.auto import tqdm
 
-from models.pretraiend_common import __version__
+from . import __version__
 
 
 logger = logging.getLogger(__name__)  # pylint: disable=invalid-name
