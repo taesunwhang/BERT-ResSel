@@ -1,14 +1,15 @@
-Domain Adaptive Training BERT for Response Selection
+An Effective Domain Adaptive Post-Training Method for BERT in Response Selection
 ====================================
-Implements the model described in the following paper [Domain Adaptive Training BERT for Response Selection](https://arxiv.org/abs/1908.04812).
+Implements the model described in the following paper [An Effective Domain Adaptive Post-Training Method for BERT in Response Selection](https://arxiv.org/abs/1908.04812v2).
 ```
-@article{whang2019domain,
-  title={Domain Adaptive Training BERT for Response Selection},
+@inproceedings{whang2020domain,
   author={Whang, Taesun and Lee, Dongyub and Lee, Chanhee and Yang, Kisu and Oh, Dongsuk and Lim, HeuiSeok},
-  journal={arXiv preprint arXiv:1908.04812},
-  year={2019}
+  title="An Effective Domain Adaptive Post-Training Method for BERT in Response Selection",
+  year=2020,
+  booktitle={Proc. Interspeech 2020}
 }
 ```
+
 This code is reimplemented as a fork of [huggingface/transformers][7].  
 
 <p align="center">
