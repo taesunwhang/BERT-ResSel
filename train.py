@@ -129,10 +129,9 @@ class ResponseSelection(object):
         accumulate_batch += buffer_batch["label"].shape[0]
         if self.hparams.virtual_batch_size == accumulate_batch \
             or batch_idx == (len(self.train_dataset) // self.hparams.train_batch_size): # last batch
+          nn.utils.clip_grad_norm_(self.model.parameters(), self.hparams.max_gradient_norm)
 
           self.optimizer.step()
-
-          nn.utils.clip_grad_norm_(self.model.parameters(), self.hparams.max_gradient_norm)
           self.optimizer.zero_grad()
           accumulate_batch = 0
 
